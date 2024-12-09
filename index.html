@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//Pizza delivary callback
+
+function step1(callback){
+    console.log("Place order")
+    callback()
+}
+function step2(callback){
+    console.log("Prepare pizza")
+    callback()
+}
+function step3(callback){
+    console.log("Bake pizza")
+    callback()
+}
+function step4(callback){
+    console.log("Pack pizza")
+    callback()
+}
+function step5(callback){
+    console.log("Deliver pizza.")
+    callback()
+}
+step1(()=>{
+    step2(()=>{
+        step3(()=>{
+            step4(()=>{
+                step5()
+            })
+        })
+    })
+})
+
+
+
+    </script>
+</body>
+</html>
